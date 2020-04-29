@@ -1,22 +1,26 @@
 {
   "name": "data_buku",
   "version": "1.0.0",
-  "description": "list_buku",
+  "description": "list buku",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nale16/api_with_express_js.git"
+    "url": "git+https://gitlab.com/nale16/api_with_express_js.git"
   },
   "author": "elan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nale16/api_with_express_js/issues"
+    "url": "https://gitlab.com/nale16/api_with_express_js/issues"
   },
-  "homepage": "https://github.com/nale16/api_with_express_js#readme",
+  "homepage": "https://gitlab.com/nale16/api_with_express_js#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
