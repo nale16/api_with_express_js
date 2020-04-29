@@ -2,7 +2,7 @@
 const userRoutes = (app, fs) => {
 
     // variables
-    const dataPath = './data/data.json';
+    const dataPath = './json/data.json';
 
     // helper methods
     const readFile = (callback, returnJson = false, filePath = dataPath, encoding = 'utf8') => {
@@ -27,7 +27,7 @@ const userRoutes = (app, fs) => {
     };
 
     // READ
-    app.get('/users', (req, res) => {
+    app.get('/books', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
                 throw err;
@@ -38,7 +38,7 @@ const userRoutes = (app, fs) => {
     });
 
     // CREATE
-    app.post('/users', (req, res) => {
+    app.post('/books', (req, res) => {
 
         readFile(data => {
             const newUserId = Object.keys(data).length + 1;
@@ -55,7 +55,7 @@ const userRoutes = (app, fs) => {
 
 
     // UPDATE
-    app.put('/users/:id', (req, res) => {
+    app.put('/books/:id', (req, res) => {
 
         readFile(data => {
 
@@ -72,7 +72,7 @@ const userRoutes = (app, fs) => {
 
 
     // DELETE
-    app.delete('/users/:id', (req, res) => {
+    app.delete('/books/:id', (req, res) => {
 
         readFile(data => {
 

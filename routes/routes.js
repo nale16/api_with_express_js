@@ -5,12 +5,14 @@ const appRouter = (app, fs) => {
 
     // default route
     app.get('/', (req, res) => {
-        res.send('welcome to the development api-server');
+        res.send('Welcome Folks');
     });
 
-    // // other routes
+    // run our user route module here to complete the wire up
     userRoutes(app, fs);
 
 };
 
+
+// this line is unchanged
 module.exports = appRouter;
