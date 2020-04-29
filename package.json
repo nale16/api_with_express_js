@@ -1,0 +1,19 @@
+{
+  "name": "api_req_with_essential_http",
+  "version": "0.0.1",
+  "description": "make_api_req",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nale16/api_with_express_js.git"
+  },
+  "author": "elan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nale16/api_with_express_js/issues"
+  },
+  "homepage": "https://github.com/nale16/api_with_express_js#readme"
+}
