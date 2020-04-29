@@ -1,7 +1,7 @@
 {
-  "name": "api_req_with_essential_http",
+  "name": "data_buku",
   "version": "0.0.1",
-  "description": "make_api_req",
+  "description": "list buku",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
