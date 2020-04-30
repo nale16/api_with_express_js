@@ -1,0 +1,27 @@
+{
+  "1": {
+    "name": "detective conan",
+    "category": "komik",
+    "id": 1
+  },
+  "2": {
+    "name": "majalah bobo",
+    "category": "majalah anak-anak",
+    "id": 2
+  },
+  "3": {
+    "name": "rentang kisah",
+    "category": "biografi",
+    "id": 3
+  },
+  "4": {
+    "name": "generasi micin",
+    "category": "novel",
+    "id": 4
+  },
+  "5": {
+    "name": "naruto",
+    "category": "manga",
+    "id": 6
+  }
+}
