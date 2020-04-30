@@ -1,7 +1,8 @@
+"use strict";
 
 const userRoutes = (app, fs) => {
 
-    // variables
+    // req data.json
     const dataPath = './json/data.json';
 
     // helper methods
@@ -26,7 +27,7 @@ const userRoutes = (app, fs) => {
         });
     };
 
-    // READ
+    // List Data : GET
     app.get('/books', (req, res) => {
         fs.readFile(dataPath, 'utf8', (err, data) => {
             if (err) {
@@ -37,51 +38,54 @@ const userRoutes = (app, fs) => {
         });
     });
 
-    // CREATE
+    // Tambah Data : POST
     app.post('/books', (req, res) => {
 
         readFile(data => {
             const newUserId = Object.keys(data).length + 1;
 
-            // add the new user
+            // Tambah Data
             data[newUserId.toString()] = req.body;
 
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send('new user added');
+                res.setHeader('Content-Type', 'application/json');
+                res.status(200).send(JSON.stringify({ "msg" : "Tambah Buku Berhasil" }));
             });
         },
             true);
     });
 
 
-    // UPDATE
+    // Update Data : PUT
     app.put('/books/:id', (req, res) => {
 
         readFile(data => {
 
-            // add the new user
+            // Perbaharui Data
             const userId = req.params["id"];
             data[userId] = req.body;
 
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send(`users id:${userId} updated`);
+                res.setHeader('Content-Type', 'application/json');
+                res.status(200).send(JSON.stringify({ "msg" : "Data Berhasil Diperbaharui" }));
             });
         },
             true);
     });
 
 
-    // DELETE
+    // Hapus Data : DELETE
     app.delete('/books/:id', (req, res) => {
 
         readFile(data => {
 
-            // add the new user
+            // Delete Data
             const userId = req.params["id"];
             delete data[userId];
 
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send(`users id:${userId} removed`);
+                res.setHeader('Content-Type', 'application/json');
+                res.status(200).send(JSON.stringify({ "msg" : "Data Berhasil Dihapus" }));
             });
         },
             true);
